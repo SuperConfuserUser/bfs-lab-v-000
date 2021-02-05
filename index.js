@@ -6,6 +6,7 @@ function bfs(rootNode, vertices, edges) {
   
   return findAdjacent(rootNode, vertices, edges);
 }
+
 // node (x,y)
 // vertices Array of Vertex
 // edges Array of [(x,y), (x,y)]
