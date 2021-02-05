@@ -12,7 +12,7 @@ function bfs(rootNode, vertices, edges) {
     explored.push(visited.shift());
   }
   
-  return visited;
+  return explored;
 }
 
 
