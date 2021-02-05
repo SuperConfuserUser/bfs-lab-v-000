@@ -5,14 +5,15 @@ function bfs(rootNode, vertices, edges) {
   const explored = [];
   const visited = [rootNode];
   
-  // while (visited[0]) {
-    const adjacent = findAdjacent(visited[0], vertices, edges);
-    markDistanceAndPredecessor(visited[0], adjacent);
+  while (visited[0]) {
+    const node = visited[0].name;
+    const adjacent = findAdjacent(name, vertices, edges);
+    markDistanceAndPredecessor(name, adjacent);
     visited.push(...adjacent);
-    // explored.push(visited.shift());
-  // }
+    explored.push(visited.shift());
+  }
   
-  return visited;
+  return explored;
 }
 
 
