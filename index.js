@@ -4,7 +4,7 @@
 function bfs(rootNode, vertices, edges) {
   const visited = [];
   
-  visited.push(...findAdjacent(ver, vertices, edges));
+  visited.push(...findAdjacent(rootNode, vertices, edges));
   
   return [vertices[0]];
 }
