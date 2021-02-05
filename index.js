@@ -4,11 +4,11 @@ function bfs(rootNode, vertices, edges){
   return queue;
 }
 
-findAdjacent() {
+findAdjacent(){
   
 }
 
-markDistanceAndPredecessor() {
+markDistanceAndPredecessor(){
   
 }
 
