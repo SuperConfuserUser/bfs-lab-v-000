@@ -11,7 +11,13 @@ function bfs(rootNode, vertices, edges){
 // vertices Array of (x,y)
 // edges Array of [(x,y), (x,y)]
 function findAdjacent(node, vertices, edges) {
-  
+  const adjacent = [];
+  edges.forEach(edge => {
+    if (edge.some(vertex => vertex === node)) {
+      adjacent.push(edge.find(vertex => vertex !== node));
+    }
+  })
+  return adjacent;
 }
 
 // node (x,y)
