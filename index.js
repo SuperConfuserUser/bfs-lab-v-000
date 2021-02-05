@@ -10,6 +10,7 @@ function bfs(rootNode, vertices, edges) {
 // node (x,y)
 // vertices Array of Vertex
 // edges Array of [(x,y), (x,y)]
+// returns Array of Vertex
 function findAdjacent(node, vertices, edges) {
   const adjacent = [];
   edges.forEach(edge => {
