@@ -16,7 +16,8 @@ function findAdjacent(node, vertices, edges) {
     if (edge.some(vertex => vertex === node)) {
       adjacent.push(edge.find(vertex => vertex !== node));
     }
-  })
+  });
+  const undiscoveredVertices = vertices.filter(vertex => vertex.distance !== null);
   return adjacent.map(node => vertices.find(vertex => vertex.name === node));
 }
 
