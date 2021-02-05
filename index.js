@@ -16,6 +16,17 @@ function bfs(rootNode, vertices, edges) {
   return explored;
 }
 
+function findAdjacent(node, vertices, edges) {
+  const adjacent = [];
+  edges.forEach(edge => {
+    if (edge.some(vertex => vertex === node)) {
+      adjacent.push(edge.find(vertex => vertex !== node));
+    }
+  });
+  return adjacent
+    .map(node => vertices.find(vertex => vertex.name === node))
+    .filter(vertex => vertex.distance === null);
+}
 
 // node (x,y)
 // vertices Array of Vertex
