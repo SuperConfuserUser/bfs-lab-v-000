@@ -19,7 +19,7 @@ function findAdjacent(node, vertices, edges) {
   });
   return adjacent
     .map(node => vertices.find(vertex => vertex.name === node))
-    .filter(vertex => vertex.distance !== null);
+    .filter(vertex => vertex.distance === null);
 }
 
 // node (x,y)
