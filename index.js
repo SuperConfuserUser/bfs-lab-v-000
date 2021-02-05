@@ -7,7 +7,7 @@ function bfs(rootNode, vertices, edges) {
   
   while (visited[0]) {
     const node = visited[0].name;
-    const adjacent = findAdjacent(node, vertices, edges);
+    const adjacent = findAllAdjacent(node, vertices, edges);
     // markDistanceAndPredecessor(node, adjacent);
     visited.push(...adjacent);
     explored.push(visited.shift());
@@ -16,16 +16,14 @@ function bfs(rootNode, vertices, edges) {
   return explored;
 }
 
-function findAdjacent(node, vertices, edges) {
+function findAllAdjacent(node, vertices, edges) {
   const adjacent = [];
   edges.forEach(edge => {
     if (edge.some(vertex => vertex === node)) {
       adjacent.push(edge.find(vertex => vertex !== node));
     }
   });
-  return adjacent
-    .map(node => vertices.find(vertex => vertex.name === node))
-    .filter(vertex => vertex.distance === null);
+  return adjacent.map(node => vertices.find(vertex => vertex.name === node));
 }
 
 // node (x,y)
