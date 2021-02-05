@@ -1,3 +1,6 @@
+//
+// vertices 
+// edges Array of [(x,y), (x,y)]
 function bfs(rootNode, vertices, edges){
   const queue = [];
   
