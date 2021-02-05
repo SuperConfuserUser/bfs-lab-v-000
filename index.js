@@ -2,10 +2,14 @@
 // vertices Array of { name: (x,y), distance: number, predecessor: string }
 // edges Array of [(x,y), (x,y)]
 function bfs(rootNode, vertices, edges) {
-  const queue = [rootNode];
   const explored = [];
+  const visited = [rootNode];
   
-  visited.push(...findAdjacent(rootNode.name, vertices, edges));
+  node = rootNode.name;
+  while (visited.length > 0) {
+    const adjacent = findAdjacent(node, vertices, edges);
+    
+  }
   
   return visited;
 }
