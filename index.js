@@ -7,7 +7,10 @@ function bfs(rootNode, vertices, edges){
   return queue;
 }
 
-function findAdjacent() {
+// node (x,y)
+// vertices Array of (x,y)
+// edges Array of [(x,y), (x,y)]
+function findAdjacent(node, vertices, edges) {
   
 }
 
