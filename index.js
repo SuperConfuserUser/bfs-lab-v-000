@@ -8,7 +8,7 @@ function bfs(rootNode, vertices, edges) {
   while (visited[0]) {
     const node = visited[0].name;
     const adjacent = findAdjacent(node, vertices, edges);
-    markDistanceAndPredecessor(node, adjacent);
+    // markDistanceAndPredecessor(node, adjacent);
     visited.push(...adjacent);
     explored.push(visited.shift());
   }
