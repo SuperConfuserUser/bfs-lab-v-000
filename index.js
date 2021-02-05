@@ -11,7 +11,9 @@ function findAdjacent() {
   
 }
 
-function markDistanceAndPredecessor() {
+// node (x,y)
+// adjacentNodes Array of (x,y)
+function markDistanceAndPredecessor(node, adjacentNodes) {
   
 }
 
