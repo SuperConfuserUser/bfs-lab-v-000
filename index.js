@@ -23,8 +23,8 @@ function findAdjacent(node, vertices, edges) {
 }
 
 // node (x,y)
-// adjacentNodes Array of (x,y)
+// adjacentNodes Array of Vertex
 function markDistanceAndPredecessor(node, adjacentNodes) {
-  return adjacentNodes.map(vertex => ({ ...vertex, }))
+  return adjacentNodes.map(vertex => ({ ...vertex, predecessor: node, distance: 1}));
 }
 
