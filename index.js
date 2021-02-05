@@ -17,7 +17,7 @@ function findAdjacent(node, vertices, edges) {
       adjacent.push(edge.find(vertex => vertex !== node));
     }
   })
-  return adjacent;
+  return adjacent.map(vertex => vertices[vertex]);
 }
 
 // node (x,y)
