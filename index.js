@@ -4,9 +4,9 @@
 function bfs(rootNode, vertices, edges) {
   const visited = [];
   
-  visited.push(...findAdjacent(rootNode, vertices, edges));
+  visited.push(...findAdjacent(rootNode.name, vertices, edges));
   
-  return [vertices[0]];
+  return visited;
 }
 
 // node (x,y)
