@@ -13,7 +13,7 @@ function bfs(rootNode, vertices, edges){
 function findAdjacent(node, vertices, edges) {
   const adjacent = [];
   edges.forEach(edge => {
-    const found = edge.findIndex(vertex => vertex === node) !== -1
+    const found = edge.findIndex(vertex => vertex === node) !== -1;
     if (found) {
       const node = found === 0 ? edge[1] : edge[0];
       adjacent.push(node);
