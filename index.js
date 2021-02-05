@@ -10,10 +10,10 @@ function bfs(rootNode, vertices, edges) {
     markDistanceAndPredecessor(node, adjacent);
     visited.push(...adjacent);
     explored.push(visited.shift());
+    return adjacent;
   }
-  
   while (visited.length > 0) {
-    
+    visit(visited[0]);
   }
   
   return visited;
