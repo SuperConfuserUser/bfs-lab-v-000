@@ -1,11 +1,11 @@
 // rootNode (x,y)
 // vertices Array of { name: (x,y), distance: number, predecessor: string }
 // edges Array of [(x,y), (x,y)]
-function bfs(rootNode, vertices, edges){
+function bfs(rootNode, vertices, edges) {
   const visited = [];
   
   return findAdjacent(rootNode, vertices, edges);
-  
+}
 // node (x,y)
 // vertices Array of Vertex
 // edges Array of [(x,y), (x,y)]
