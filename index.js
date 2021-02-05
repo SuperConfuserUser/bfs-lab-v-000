@@ -9,10 +9,11 @@ function bfs(rootNode, vertices, edges) {
   while (visited.length > 0) {
     const adjacent = findAdjacent(node, vertices, edges);
     adjacent.markDistanceAndPredecessor(node, adjacent);
-    
+    visited.push(...adjacent);
+    explored.push(visited.shift());
   }
   
-  return visited;
+  return explored;
 }
 
 // node (x,y)
