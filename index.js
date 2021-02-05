@@ -5,9 +5,10 @@ function bfs(rootNode, vertices, edges) {
   const explored = [];
   const visited = [rootNode];
   
-  node = rootNode.name;
+  let node = rootNode.name;
   while (visited.length > 0) {
     const adjacent = findAdjacent(node, vertices, edges);
+    adjacent.markDistanceAndPredecessor(node, adjacent);
     
   }
   
